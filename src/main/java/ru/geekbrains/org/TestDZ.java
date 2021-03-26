@@ -14,7 +14,7 @@ import  java.util.concurrent.TimeUnit;
 public class TestDZ {
     private static final String LOGIN_PAGE_URL = "https://crm.geekbrains.space/user/login";
     private static final String STUDENT_LOGIN = "Applanatest";
-    private static final String STUDENT_PASSWORD = "STUDENT2020!";
+    private static final String STUDENT_PASSWORD = "Student2020!";
     private static final WebDriver driver;
 
     static{
@@ -26,14 +26,22 @@ public class TestDZ {
 
     public static void main(String[] args) {
         login();
-        // Навести курсор на вкладку "Проекты"
-        driver.findElement(By.xpath("//html/body/div[2]/div/header/div[2]/ul/li[3]/a/span")).click();
+        //Нажать на кропку "Создать контактное лицо"
+        driver.findElement(By.xpath("xpath=//a[@title='Создать контактное лицо']")).click();
 
-        //Нажать на вкладку "Мои Проекты"
-        driver.findElement(By.xpath("//html/body/div[2]/div/header/div[2]/ul/li[3]/ul/li[4]/a/span")).click();
+        //Ввести фамилию "Орехов"
+        driver.findElement(By.xpath("xpath=//div/div/div[2]/input")).click();
 
-        //Нажать на кнопку "Создать проект"
-        driver.findElement(By.linkText("linkText=Создать проект")).click();
+        //Ввести имя "Григорий"
+        driver.findElement(By.linkText("xpath=//div/div[2]/div[2]/input")).click();
+
+        //Выбрать из списка название организации "Tesla.Co"
+        driver.findElement(By.linkText("xpath=//div[2]/div/div/a/span")).click();
+
+       //Ввести название должности "Тестировщик"
+        driver.findElement(By.linkText("xpath=//div[2]/div[2]/div[2]/input")).click();
+
+
 
 
     }
