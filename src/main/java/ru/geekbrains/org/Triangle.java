@@ -1,4 +1,4 @@
-package GB;
+package ru.geekbrains.org;
 import java.util.Scanner;
 
 
@@ -17,8 +17,9 @@ public class Triangle {
         double c = scanner.nextDouble();
 
         //Площадь треугольника вычисляется по формуле = (a*b*c)/2
-        double area = (a * b * c) / 2;
+        double area = (a * b * c) ;
         System.out.println("Площадь треугольника равна: " + area);
+
     }
 
 
