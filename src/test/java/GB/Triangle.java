@@ -17,7 +17,12 @@ public class Triangle {
         double c = scanner.nextDouble();
 
         //Площадь треугольника вычисляется по формуле = (a*b*c)/2
-        double area = (a*b*c)/2;
+        double area = (a * b * c) / 2;
         System.out.println("Площадь треугольника равна: " + area);
+    }
+
+
+    public static int main(int i) {
+        return i;
     }
 }

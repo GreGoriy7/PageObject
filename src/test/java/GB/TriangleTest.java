@@ -1,13 +1,17 @@
 package GB;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class TriangleTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TriangleTest {
 
     @Test
-    public static void Triangle(){
-        Assertions.assertTrue(true);
+    void main() {
+        Triangle triangle = new Triangle();
+        int actual = Triangle.main(6);
+        int expected = 6;
+        assertEquals(expected, actual);
 
     }
 }
