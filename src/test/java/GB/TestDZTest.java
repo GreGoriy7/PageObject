@@ -3,21 +3,14 @@ package GB;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 class TestDZTest {
@@ -25,6 +18,31 @@ class TestDZTest {
     private final String STUDENT_LOGIN = "Applanatest";
     private final String STUDENT_PASSWORD = "Student2020!";
     private WebDriver driver;
+    private JavascriptExecutor jsExecutor;
+
+    @BeforeAll
+    public static void setupWebDriverManager(){// настройка браузера
+        WebDriverManager.chromedriver().setup();
+    }
+    @BeforeEach
+    public void beforeTest(){
+        setUpDriverSession();
+        login(); // Авторизация по логину
+    }
+
+    private void login() {
+    }
+
+    private void setUpDriverSession() {
+    }
+
+    @AfterEach
+    public void tearDown(){
+        if (driver != null){
+            driver.quit();
+        }
+        
+    }
 
 
 
