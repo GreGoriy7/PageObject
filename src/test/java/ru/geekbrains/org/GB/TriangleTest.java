@@ -1,4 +1,4 @@
-package GB;
+package ru.geekbrains.org.GB;
 
 import org.junit.jupiter.api.Test;
 import ru.geekbrains.org.Triangle;
